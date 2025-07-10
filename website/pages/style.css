@@ -1,0 +1,111 @@
+* {
+	background-color: #0a1908;
+	color: #7dfd90;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0 2px;
+}
+
+.footer {
+	font-size: 0.8rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.blog {
+  --tree-clr: #7dfd90;
+  --tree-font-size: 1rem;
+  --tree-item-height: 3;
+  --tree-offset: 3rem;
+  --tree-thickness: 2px;
+  --tree-style: solid;
+}
+
+p.blog-root {
+  margin-bottom: 1.5rem;
+}
+
+.blog ul{
+  display: grid;
+  list-style: none;
+  font-size: var(--tree-font-size);
+  margin-top: 1.4rem;
+}
+
+.blog li{
+  line-height: var(--tree-item-height);
+  padding-inline-start: var(--tree-offset);
+  border-left: var(--tree-thickness) var(--tree-style) var(--tree-clr);
+  position: relative;
+  text-indent: .5rem;
+  
+  &:last-child {
+    border-color: transparent; /* hide (not remove!) border on last li element*/
+  }
+  & span{
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 100;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: calc(var(--tree-item-height) / 2 * -1 * var(--tree-font-size) + var(--tree-thickness));
+    left: calc(var(--tree-thickness) * -1); 
+    width: calc(var(--tree-offset) + var(--tree-thickness) * 2);
+    height: calc(var(--tree-item-height)  * var(--tree-font-size));
+    border-left: var(--tree-thickness) var(--tree-style) var(--tree-clr);
+    border-bottom: var(--tree-thickness) var(--tree-style) var(--tree-clr);
+  }
+
+  h3 {
+    margin-top: 0rem;
+    margin-bottom: -1.2rem;
+  }
+
+  p {
+    margin-top: 0rem;
+    --tree-offset: 2rem;
+  }
+
+  a.blog-entry {
+      text-decoration: none;
+  }
+
+  div.blog-entry {
+    border-top: var(--tree-thickness) var(--tree-style) var(--tree-clr);
+    border-left: var(--tree-thickness) var(--tree-style) var(--tree-clr);
+    border-bottom: var(--tree-thickness) var(--tree-style) var(--tree-clr);
+    margin-bottom: 0.3rem;
+    margin-left: 0.2rem;
+  }
+
+  div.blog-entry-heading {
+    display: flex;
+  }
+
+  .blog-entry-heading span {
+      margin-left: 3rem;
+      font-size: 0.7rem;
+  }
+
+}
+
+/* Hello there */
+/* You have found the secret easter egg! */
+/* Below are the people who have found vulnerabities in this website other than me */
+
+/* (currently empty) */
+/* (this could be you) */

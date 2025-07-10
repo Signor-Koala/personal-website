@@ -1,0 +1,4 @@
+/target
+*.db
+/website/pages/blag.html
+/website/pages/blag/*
