@@ -1,6 +1,5 @@
 use std::fs::{self, read_to_string};
 
-#[derive(Debug)]
 struct Metadata {
     filename: String,
     title: String,

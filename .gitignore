@@ -2,3 +2,4 @@
 *.db
 /website/pages/blag.html
 /website/pages/blag/*
+/website_templates/blags/*
